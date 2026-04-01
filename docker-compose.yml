@@ -1,0 +1,7 @@
+services:
+  yt-bot:
+    build: .
+    container_name: yt-bot
+    restart: unless-stopped
+    volumes:
+      - /tmp/yt_bot_downloads:/tmp/yt_bot_downloads
