@@ -143,7 +143,7 @@ async def handle_message(update, context):
             await status.edit_text(f"☁️ {label} ({size:.0f} МБ) → облако...")
             ok = await loop.run_in_executor(None, upload_to_mailru, filepath, filename)
             if ok:
-                await update.message.reply_text(f"☁️ {label} • {size:.0f} МБ\nЗагружен → cloud.mail.ru{MAILRU_FOLDER}")
+                await update.message.reply_text(f"☁️ {label} • {size:.0f} МБ\nЗагружен → cloud.mail.ru/home{MAILRU_FOLDER}")
             else:
                 await update.message.reply_text(f"❌ {label} — ошибка загрузки в облако.")
         try:
