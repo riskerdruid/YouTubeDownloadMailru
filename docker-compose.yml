@@ -3,5 +3,6 @@ services:
     build: .
     container_name: yt-bot
     restart: unless-stopped
+    env_file: .env
     volumes:
       - /tmp/yt_bot_downloads:/tmp/yt_bot_downloads
